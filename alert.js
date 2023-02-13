@@ -39,8 +39,15 @@ const personalMovieDB = {
     }
   },
   showMyDB: function(hidden) {
-    if (personalMovieDB.privat == false) {
+    if (!hidden) {
       console.log(personalMovieDB);
+    }
+  },
+  toggleVisibleMyBD: function() {
+    if (personalMovieDB.privat) {
+      personalMovieDB.privat = false;
+    } else {
+      personalMovieDB.privat = true;
     }
   },
   writeYourGenres: function() {
